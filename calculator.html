@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+      function disp(val){
+        document.getElementById("num").value+=val
+      }
+      function result(){
+        let x = document.getElementById("num").value
+        let y = eval(x)
+        document.getElementById("num").value=y
+      }
+      function clr()
+      {
+        document.getElementById("num").value="";
+      }
+    </script>
+    <title>Calculator</title>
+  </head>
+  <body>
+      <input type="text" id="num" class="field">
+      <button onclick="result()">Result</button><br>
+      <input type="button" value="1" onclick="disp('1')" class="one">
+      <input type="button" value="2" onclick="disp('2')" class="two">
+      <input type="button" value="3" onclick="disp('3')" class="one">
+      <input type="button" value="+" onclick="disp('+')" class="two"><br>
+      <input type="button" value="4" onclick="disp('4')" class="one">
+      <input type="button" value="5" onclick="disp('5')" class="two">
+      <input type="button" value="6" onclick="disp('6')" class="one">
+      <input type="button" value="-" onclick="disp('-')" class="two"><br>
+      <input type="button" value="7" onclick="disp('7')" class="one">
+      <input type="button" value="8" onclick="disp('8')" class="two">
+      <input type="button" value="9" onclick="disp('9')" class="one">
+      <input type="button" value="*" onclick="disp('*')" class="two"><br>
+      <input type="button" value="/" onclick="disp('/')" class="one">
+      <input type="button" value="0" onclick="disp('0')" class="two">
+      <input type="button" value="%" onclick="disp('%')" class="one">
+      <input type="button" value="c" onclick="clr()" class="two">
+  </body>
+</html>
